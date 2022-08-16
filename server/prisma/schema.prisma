@@ -9,3 +9,30 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model Trades {
+  id Int @id @default(autoincrement())
+    createdOn DateTime @default(now())
+    updatedOn DateTime @updatedAt
+   Post Post[]
+}
+
+
+model Post{
+    id Int @id @default(autoincrement())
+    datetime DateTime 
+    exchange String
+    symbol String
+    orderID String
+    amount String
+    price String
+    direction String 
+    tradeCurrency String
+    fees String
+    feesCurrency String 
+    strategy String 
+    clientOrderID String?
+    Trades Trades? @relation(fields: [TradesID] , references: [id])
+    TradesID Int? 
+}
