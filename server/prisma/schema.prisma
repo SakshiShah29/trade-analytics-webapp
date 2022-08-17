@@ -36,3 +36,10 @@ model Post{
     Trades Trades? @relation(fields: [TradesID] , references: [id])
     TradesID Int? 
 }
+
+// Model for storing user Basic data
+model users {
+  id Int @id @default(autoincrement())
+  email String @unique
+  name String 
+}

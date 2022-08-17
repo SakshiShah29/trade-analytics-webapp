@@ -1,0 +1,41 @@
+GET http://localhost:3000/api/trades
+
+###
+POST    http://localhost:3000/api/trades
+Content-Type: application/json
+
+{  
+      "datetime": "2022-08-16T14:28:37.617Z",
+      "exchange": "test",
+      "symbol": "test",
+      "orderID": "test",
+      "amount": "test",
+      "price": "test",
+      "direction": "test",
+      "tradeCurrency": "test",
+      "fees": "test",
+      "feesCurrency": "test",
+      "strategy": "test",
+      "clientOrderID": "test",
+      "TradesID" : 1
+  }
+
+###
+
+POST http://localhost:3000/signup   
+Content-Type: application/json
+
+{
+    "email" : "shrutiunakdat5@gmail.com",
+    "name" : "Shruti"
+}
+
+###
+
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+    "email" : "shrutiunakdat5@gmail.com",
+    "name" : "Shruti"
+}
